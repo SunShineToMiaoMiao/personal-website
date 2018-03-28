@@ -1,6 +1,6 @@
 # smile
 
-> my first website 
+> my first website
 
 ## Build Setup
 
@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:8086
 npm run dev
 
 # build for production with minification
