@@ -1,26 +1,12 @@
 <template>
-  <div>
-    <!-- 头部 -->
-    <header></header>
-
-    <!-- 主内容 -->
-    <main>
-      <section>
-        <!--文章列表-->
-        <article></article>
-      </section>
-      <!-- 右边目录区 -->
-      <aside></aside>
-    </main>
-
-    <!-- 底部 -->
-    <footer></footer>
+  <div class="hello">
+    内容区域
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Layout',
+  name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -29,6 +15,7 @@ export default {
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1, h2 {
     font-weight: normal;

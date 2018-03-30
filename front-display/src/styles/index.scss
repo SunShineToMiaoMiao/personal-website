@@ -1,0 +1,66 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './iview';
+@import './sidebar.scss';
+@import './common.scss';
+
+/**
+ 全局样式
+ */
+
+// flex布局，水平垂直居中
+.flex-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.app-header{
+  //@extend .flex-row-center;
+  //padding:$headerPadding 0 $headerPadding 0;// 上右下左
+  position: fixed;
+  width: 100%;
+}
+.app-main{
+  min-height: 100%;
+  margin: 88px 20px 0;
+  background: #fff;
+  //minHeight: 500px;
+  padding: 0 50px;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.input-common-width {
+  width: 360px;
+}
+
+.input-search-width {
+  width: 220px;
+}
+
+.warp-add {
+  margin-top: -10px;
+  text-align: right;
+}
+
+.warp-pagination {
+  text-align: right;
+}
+
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}

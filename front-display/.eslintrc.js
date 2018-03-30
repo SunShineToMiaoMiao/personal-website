@@ -25,6 +25,8 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    //去掉有闭合标签的检查
+    "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]
     // 空格4个
     // 'indent': ['error', 2, {'SwitchCase': 1}],
   }
