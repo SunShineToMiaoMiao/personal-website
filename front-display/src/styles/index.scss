@@ -8,6 +8,38 @@
 /**
  全局样式
  */
+//网站内容居中
+.padding {
+   padding: 0 5% 0 5%;
+}
+
+
+
+.app-container {
+}
+
+.app-header{
+  //@extend .flex-row-center;
+    @extend .padding;
+  //padding:$headerPadding 0 $headerPadding 0;// 上右下左
+  position: fixed;
+height: 65px;
+  width: 100%;
+}
+.app-main{
+    @extend .padding;
+  min-height: 100%;
+    top:65px;
+    bottom: 80px;
+  margin: 88px 20px 0;
+  background: #fff;
+  //minHeight: 500px;
+  //padding: 0 50px;
+
+}
+.app-footer {
+    height: 80px;
+}
 
 // flex布局，水平垂直居中
 .flex-row-center {
@@ -16,24 +48,6 @@
   justify-content: space-around;
   align-items: center;
   align-content: flex-start;
-}
-
-.app-header{
-  //@extend .flex-row-center;
-  //padding:$headerPadding 0 $headerPadding 0;// 上右下左
-  position: fixed;
-  width: 100%;
-}
-.app-main{
-  min-height: 100%;
-  margin: 88px 20px 0;
-  background: #fff;
-  //minHeight: 500px;
-  padding: 0 50px;
-}
-
-.app-container {
-  padding: 20px;
 }
 
 .input-common-width {
