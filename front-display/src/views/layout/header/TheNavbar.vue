@@ -1,13 +1,13 @@
 <template>
     <div>
-        <div class="app-menu-list">
+        <div class="app-menu-list flex-row-center">
             <div>
-                <router-link  to="/index" class="app-menu-item">
+                <router-link to="/index" class="app-menu-item">
                     首页
                 </router-link>
             </div>
             <div>
-                <router-link  to="/common" class="app-menu-item">
+                <router-link to="/common" class="app-menu-item">
                     常用
                 </router-link>
             </div>
@@ -44,25 +44,16 @@ export default {
 
 <style rel="stylesheet/scss" lang="scss" scoped>
     @import "../../../styles/variables";
+    /* 一级导航的字体大小 */
+    $firstLevel: 16px;
     .app-menu-list {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: flex-start;
-        justify-content: center;
-        /*text-align: left;*/
-        /*height: 50px;
-        position: fixed;
-        width: 100%;
-        z-index: 999;
-        top: 0;
-        line-height: 50px;
-        border-radius: 0 !important;
-        color: #949494 !important;*/
+        font-size: $firstLevel;
         .app-menu-item {
             &:hover{
-                background: #d3dce6;
+                background: #F3F3F3;
             }
             padding: $commonPadding;
+            color: #B8B8B8;
             width: 60px;
             height: 40px;
             flex: none;
@@ -100,12 +91,4 @@ export default {
           }
         }*/
     }
-
-    /*.flex-center {
-      display: flex;
-      justify-content: space-around;
-      flex-flow: row nowrap;
-      align-items: center;
-      align-content: flex-start;
-    }*/
 </style>

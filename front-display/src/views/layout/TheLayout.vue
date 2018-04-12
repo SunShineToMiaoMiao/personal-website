@@ -37,13 +37,13 @@
             <header>
                 <Header class="app-header">
                     <Row>
-                        <i-col :md="6" :lg="6">
+                        <i-col :md="2" :lg="2">
                             <the-logo/>
                         </i-col>
-                        <i-col :md="8" :lg="8">
+                        <i-col :md="10" :lg="10">
                             <the-navbar/>
                         </i-col>
-                        <i-col :md="10" :lg="10">
+                        <i-col :md="12" :lg="12">
                             <search-box/>
                         </i-col>
                     </Row>
@@ -52,15 +52,55 @@
 
             <!-- 主内容 -->
             <main class="app-main">
-                <Content>
-                    <section class="app-section warp-pagination">
-                        <transition name="fade" mode="out-in">
-                            <!--文章列表-->
-                            <!--<article></article>-->
-                            <router-view/>
-                        </transition>
-                    </section>
-                </Content>
+                <Layout>
+                    <aside>
+                        <Sider hide-trigger>Sider</Sider>
+                    </aside>
+                    <Content>
+                        <section class="app-section warp-pagination">
+                            <Card class="app-card" title="热门">
+                                <ul slot="extra" class="filter-list">
+                                    <li class="filter-item">
+                                        <span class="title">阅读数</span>
+                                    </li>
+                                    <li class="filter-item">
+                                        <span class="title">评论数</span>
+                                    </li>
+                                    <li class="filter-item">
+                                        <span class="title">点赞数</span>
+                                    </li>
+                                    <li class="filter-item">
+                                        <span class="title">发布时间</span>
+                                    </li>
+                                    <li class="filter-item">
+                                        <span class="title">可下载</span>
+                                    </li>
+                                </ul>
+                                <transition name="fade" mode="out-in">
+                                    <!--文章列表-->
+                                    <!--<article></article>-->
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <p>Content of no border type. Content of no border type. Content of no border type.
+                                        Content of no border type. </p>
+                                    <!--<router-view/>-->
+                                </transition>
+                            </Card>
+                        </section>
+                    </Content>
+                </Layout>
             </main>
             <!-- 底部 -->
             <footer class="app-footer">
