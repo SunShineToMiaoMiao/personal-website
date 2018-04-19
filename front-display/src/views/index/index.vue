@@ -1,18 +1,22 @@
 <template>
-  <div class="hello">
-    内容区域
+  <div>
+    <!--文章列表-->
+    <article-list></article-list>
   </div>
 </template>
 
 <script>
-export default {
+  import ArticleList from '../../components/articleList/ArticleList'
+
+  export default {
     name: 'HelloWorld',
+    components: {ArticleList},
     data () {
-        return {
-            msg: 'Welcome to Your Vue.js App'
-        }
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
     }
-}
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

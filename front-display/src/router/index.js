@@ -9,28 +9,28 @@ import index from '@/views/index/index'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'layout',
-      component: TheLayout,
-      redirect: '/index',
-      hidden: true,
-      children: [
+    routes: [
         {
-          path: 'helloWorld',
-          name: 'HelloWorld',
-          component: HelloWorld
-          // meta: { title: '用户一览', icon: 'table' }
-        },
-        {
-          path: '/index',
-          name: 'index',
-          component: index
-          // meta: { title: '用户分析', icon: 'tree' }
+            path: '/',
+            name: 'layout',
+            component: TheLayout,
+            redirect: '/index',
+            hidden: true,
+            children: [
+                {
+                    path: 'helloWorld',
+                    name: 'HelloWorld',
+                    component: HelloWorld
+                    // meta: { title: '用户一览', icon: 'table' }
+                },
+                {
+                    path: '/index',
+                    name: 'index',
+                    component: index
+                    // meta: { title: '用户分析', icon: 'tree' }
+                }
+            ]
         }
-      ]
-    }
 
-  ]
+    ]
 })

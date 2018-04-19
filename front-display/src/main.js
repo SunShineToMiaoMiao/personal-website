@@ -9,9 +9,12 @@ import iView from 'iview'
 import 'iview/dist/styles/iview.css'
 // 导入主题颜色
 import './my-theme/index.less'
+// SvgIcon
+import SvgIcon from '@/components/SvgIcon'
 
 Vue.config.productionTip = false
 Vue.use(iView)
+Vue.component('svg-icon', SvgIcon)
 
 /* eslint-disable no-new */
 new Vue({

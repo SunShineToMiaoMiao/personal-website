@@ -15,6 +15,14 @@ module.exports = {
         // https://github.com/standard/standard/blob/master/docs/RULES-en.md
         'standard'
     ],
+    // check if imports actually resolve
+    settings: {
+        'import/resolver': {
+            webpack: {
+                config: 'build/webpack.base.conf.js',
+            },
+        },
+    },
     // required to lint *.vue files
     plugins: [
         'vue'
@@ -30,6 +38,15 @@ module.exports = {
         //启用console
         'no-console': 'off',
         // 空格4个
-        'indent': ['error', 4, {'SwitchCase': 1}],
+        // 'indent': ['error', 4, {'SwitchCase': 1}],
+        'indent': 'off',
+        "no-multiple-empty-lines": [1, {"max": 2}],//空行最多不能超过2行
+        'vue/script-indent': [
+            'error',
+            2,
+            {
+                'baseIndent': 1
+            }
+        ]
     }
 }

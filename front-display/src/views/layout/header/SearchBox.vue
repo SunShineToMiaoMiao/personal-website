@@ -7,15 +7,15 @@
 </template>
 
 <script>
-export default {
-  name: 'SearchBox',
-  data () {
-    return {
-      searchText: '',
-      msg: 'Welcome to Your Vue.js App'
+  export default {
+    name: 'SearchBox',
+    data () {
+      return {
+        searchText: '',
+        msg: 'Welcome to Your Vue.js App'
+      }
     }
   }
-}
 </script>
 
 <style scoped>
