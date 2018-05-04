@@ -53,38 +53,9 @@
       <!-- 主内容 -->
       <main class="app-main">
         <Layout>
-          <aside>
-            <!-- 标签 -->
-            <Sider hide-trigger>
-              <the-left-side></the-left-side>
-            </Sider>
-          </aside>
-          <Content>
-            <section class="app-section warp-pagination">
-              <Card class="app-card" title="热门" padding="0">
-                <ul slot="extra" class="filter-list">
-                  <li class="filter-item">
-                    <span class="title">阅读数</span>
-                  </li>
-                  <li class="filter-item">
-                    <span class="title">评论数</span>
-                  </li>
-                  <li class="filter-item">
-                    <span class="title">点赞数</span>
-                  </li>
-                  <li class="filter-item">
-                    <span class="title">发布时间</span>
-                  </li>
-                  <li class="filter-item">
-                    <span class="title">可下载</span>
-                  </li>
-                </ul>
-                <transition name="fade" mode="out-in">
-                  <router-view/>
-                </transition>
-              </Card>
-            </section>
-          </Content>
+          <transition name="fade" mode="out-in">
+            <router-view/>
+          </transition>
         </Layout>
       </main>
       <!-- 底部 -->
@@ -102,14 +73,11 @@
   import SearchBox from './header/SearchBox.vue'
   import TheNavbar from './header/TheNavbar.vue'
   import TheLogo from './header/TheLogo.vue'
-  import ICol from '../../../node_modules/iview/src/components/grid/col'
-  import TheLeftSide from './TheLeftSide'
+  // import ICol from '../../../node_modules/iview/src/components/grid/col'
 
   export default {
     name: 'TheLayout',
     components: {
-      TheLeftSide,
-      ICol,
       SearchBox,
       TheNavbar,
       TheLogo

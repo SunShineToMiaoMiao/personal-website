@@ -1,9 +1,8 @@
 <template>
   <div>
     <article-list-item></article-list-item>
-    <hr class="article-hr">
+    <hr class="hr">
     <article-list-item></article-list-item>
-    asdfffffffffffffffff
   </div>
 </template>
 
@@ -17,7 +16,7 @@
 </script>
 
 <style scoped>
-.article-hr{
+.hr{
   border: 0.5px solid #E9EAEC;
 }
 </style>

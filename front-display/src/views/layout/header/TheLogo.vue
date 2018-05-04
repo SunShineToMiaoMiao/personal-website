@@ -1,6 +1,6 @@
 <template>
   <div class="app-logo">
-    习之
+    学而时习之
   </div>
 </template>
 
@@ -20,8 +20,10 @@
 
   .app-logo {
     color: $appColor;
+    letter-spacing: 1px;
     font-size: 16px;
     text-space: 1px;
+    font-weight: 600;
     text-align: center;
   }
 </style>

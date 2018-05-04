@@ -2,7 +2,7 @@
   <div class="article-list-item">
     <!-- 标题 -->
     <div>
-      <router-link to="">
+      <router-link to="/article/one">
         基于vue+element实现的修改密码的单文件组件：changePassword.vue
       </router-link>
     </div>
