@@ -4,6 +4,7 @@
            icon="ios-search"
            placeholder="搜索习之"
     />
+    <svg-icon icon-class="sousuo" class="search-icon"></svg-icon>
   </div>
 </template>
 
@@ -27,8 +28,11 @@
   /* 1280分辨率以上（大于1200px） */
   @media screen and (min-width: 1200px) {
     .search-input {
-    width: 600px;
-  }
+      width: 600px;
+    }
+    .search-icon{
+      display: none;
+    }
   }
 
   /*1100分辨率（大于960px，小于1199px）*/
@@ -37,6 +41,9 @@
     .search-input {
       width: 600px;
     }
+    .search-icon{
+      display: none;
+    }
   }
 
   /*880分辨率（大于768px，小于959px）*/
@@ -44,6 +51,9 @@
   @media screen and (min-width: 768px) and (max-width: 959px) {
     .search-input {
       width: 380px;
+    }
+    .search-icon{
+      display: none;
     }
   }
 
@@ -54,6 +64,9 @@
       /*width: 380px;*/
       display: none;
     }
+    .search-icon{
+      display: -webkit-box;
+    }
   }
 
   /*440分辨率以下（小于479px）*/
@@ -62,6 +75,9 @@
     .search-input {
       /*width: 280px;*/
       display: none;
+    }
+    .search-icon{
+      display: -webkit-box;
     }
   }
 
