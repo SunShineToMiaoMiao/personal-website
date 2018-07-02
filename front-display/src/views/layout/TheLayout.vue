@@ -34,20 +34,29 @@
     <!-- 布局 -->
     <Layout>
       <!-- 头部 -->
-      <header>
-        <Header class="app-header">
-          <Row>
-            <i-col :md="2" :lg="2">
-              <the-logo/>
-            </i-col>
-            <i-col :md="10" :lg="10">
-              <the-navbar/>
-            </i-col>
-            <i-col :md="12" :lg="12">
-              <search-box/>
-            </i-col>
-          </Row>
-        </Header>
+      <header class="app-header">
+        <the-logo/>
+        <nav>
+          <the-navbar/>
+          <div class="header-operation">
+            <search-box/>
+            <login-or-register></login-or-register>
+          </div>
+        </nav>
+
+        <!--<Header class="app-header">-->
+        <!--<Row>-->
+        <!--<i-col :xs="8" :sm="6" :md="8" :lg="8">-->
+        <!--<the-logo/>-->
+        <!--</i-col>-->
+        <!--<i-col :xs="8" :sm="8" :md="6" :lg="6">-->
+        <!--<the-navbar/>-->
+        <!--</i-col>-->
+        <!--<i-col :xs="8" :sm="8" :md="10" :lg="10">-->
+        <!--<search-box/>-->
+        <!--</i-col>-->
+        <!--</Row>-->
+        <!--</Header>-->
       </header>
 
       <!-- 主内容 -->
@@ -73,11 +82,14 @@
   import SearchBox from './header/SearchBox.vue'
   import TheNavbar from './header/TheNavbar.vue'
   import TheLogo from './header/TheLogo.vue'
+  import LoginOrRegister from '../user/LoginOrRegister'
+
   // import ICol from '../../../node_modules/iview/src/components/grid/col'
 
   export default {
     name: 'TheLayout',
     components: {
+      LoginOrRegister,
       SearchBox,
       TheNavbar,
       TheLogo

@@ -9,7 +9,7 @@
       </aside>
       <Content>
         <section class="app-section warp-pagination">
-          <Card class="app-card" title="热门" padding="0">
+          <Card class="app-card" title="热门" padding="0" :bordered="false">
             <ul slot="extra" class="filter-list">
               <li class="filter-item">
                 <span class="title">阅读数</span>
@@ -46,7 +46,7 @@
   export default {
     name: 'TheIndex',
     components: {TheLeftSide, ArticleList},
-    data () {
+    data() {
       return {
         msg: 'Welcome to Your Vue.js App'
       }

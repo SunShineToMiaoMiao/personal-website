@@ -1,3 +1,4 @@
+/* sass的公用样式 */
 @mixin clearfix {
   &:after {
     content: "";
@@ -25,3 +26,11 @@
   height: 100%;
 }
 
+/* flex横向布局 */
+@mixin flex-row($align:flex-start) {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  //align-content: $align;
+  justify-content: $align;
+}

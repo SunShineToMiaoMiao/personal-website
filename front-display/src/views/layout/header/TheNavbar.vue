@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <div class="app-menu-list flex-row-center">
+  <div class="app-menu-list">
+    <!-- 全部菜单 -->
+    <div class="menu-all">
       <div>
         <router-link to="/index" class="app-menu-item">
           首页
@@ -12,22 +13,18 @@
         </router-link>
       </div>
       <div></div>
-
     </div>
-
-    <!--<Menu mode="horizontal" theme="light" active-name="1">-->
-    <!--<div class="layout-logo"></div>-->
-    <!--<div class="layout-nav">-->
-    <!--<MenuItem name="1">-->
-    <!--&lt;!&ndash;<Icon type="ios-navigate"></Icon>&ndash;&gt;-->
-    <!--首页-->
-    <!--</MenuItem>-->
-    <!--<MenuItem name="2">-->
-    <!--&lt;!&ndash;<Icon type="ios-keypad"></Icon>&ndash;&gt;-->
-    <!--常用-->
-    <!--</MenuItem>-->
-    <!--</div>-->
-    <!--</Menu>-->
+    <!-- 小分辨率下的下拉菜单 -->
+    <div class="menu-drop-down">
+      <Menu mode="horizontal" active-name="1">
+        <Submenu name="1">
+          <template slot="title">
+            首页
+          </template>
+          <MenuItem name="3-4">常用</MenuItem>
+        </Submenu>
+      </Menu>
+    </div>
   </div>
 </template>
 
@@ -44,51 +41,53 @@
 
 <style rel="stylesheet/scss" lang="scss" scoped>
   @import "../../../styles/variables";
+  @import "../../../styles/mixin";
   /* 一级导航的字体大小 */
   $firstLevel: 16px;
   .app-menu-list {
+    @include flex-row();
     font-size: $firstLevel;
-    .app-menu-item {
-      &:hover {
-        background: #F3F3F3;
+    .menu-all {
+      .app-menu-item {
+        &:hover {
+          background: #F3F3F3;
+        }
+        padding: $commonPadding;
+        color: #B8B8B8;
+        width: 60px;
+        height: 40px;
+        flex: none;
       }
-      padding: $commonPadding;
-      color: #B8B8B8;
-      width: 60px;
-      height: 40px;
-      flex: none;
     }
+    .menu-drop-down{
+      /*<!--font-size: $firstLevel !important;-->*/
+      margin-left: 1rem;
+    }
+/*
     div:last-child {
       flex: 1;
-    }
-
-    /*.screenfull {
-      position: absolute;
-      right: 90px;
-      top: 16px;
-      color: red;
-    }
-    .avatar-container {
-      height: 50px;
-      display: inline-block;
-      position: absolute;
-      right: 55px;
-      .avatar-wrapper {
-        cursor: pointer;
-        margin-top: 5px;
-        position: relative;
-        .user-avatar {
-          width: 40px;
-          height: 40px;
-          border-radius: 10px;
-        }
-        .el-icon-caret-bottom {
-          position: absolute;
-          right: -20px;
-          top: 25px;
-          font-size: 12px;
-        }
-      }
     }*/
+  }
+
+  @media screen and (min-width: 980px) {
+    .app-menu-list {
+      .menu-all {
+        display: -webkit-box;
+      }
+      .menu-drop-down {
+        display: none !important;
+      }
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    .app-menu-list {
+      .menu-all {
+        display: none !important;
+      }
+      .menu-drop-down {
+        display: -webkit-box;
+      }
+    }
   }
 </style>
