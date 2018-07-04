@@ -35,11 +35,15 @@
     <Layout>
       <!-- 头部 -->
       <header class="app-header">
+        <!-- logo -->
         <the-logo/>
         <nav>
+          <!-- 一级菜单 -->
           <the-navbar/>
           <div class="header-operation">
+            <!-- 搜索框 -->
             <search-box/>
+            <!-- 登录按钮 -->
             <login-or-register></login-or-register>
           </div>
         </nav>
@@ -61,11 +65,11 @@
 
       <!-- 主内容 -->
       <main class="app-main">
-        <Layout>
+        <!--<Layout>-->
           <transition name="fade" mode="out-in">
             <router-view/>
           </transition>
-        </Layout>
+        <!--</Layout>-->
       </main>
       <!-- 底部 -->
       <footer class="app-footer">

@@ -1,6 +1,6 @@
 <template>
   <div class="technical-nav">
-    <h5>标签</h5>
+    <h5 class="technical-nav-title">标签</h5>
     <!--<router-link to=""></router-link>-->
 
     <technical-nav-item to="" icon-class="vuejs">vue</technical-nav-item>
@@ -12,6 +12,7 @@
 
 <script>
   import TechnicalNavItem from './TechnicalNavItem'
+
   export default {
     name: 'TechnicalNav',
     components: {TechnicalNavItem}
@@ -22,6 +23,20 @@
 
   .technical-nav {
     text-align: left;
+    width: 8rem;
+    margin-right: 2rem;
+    &-title {
+      margin-bottom: 0.5rem;
+      /*margin-top: 1rem;*/
+    }
+    &-title::after {
+      position: absolute;
+      content: '';
+      border-bottom: 1px solid #eee;
+      width: 6.2rem;
+      margin-left: 0.2rem;
+      margin-top: 0.5rem;
+    }
   }
 
 </style>

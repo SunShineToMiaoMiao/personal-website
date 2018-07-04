@@ -27,10 +27,10 @@
 }
 
 /* flex横向布局 */
-@mixin flex-row($align:flex-start) {
+@mixin flex-row($alignY:flex-start,$alignX:center) {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: $alignX;
   //align-content: $align;
-  justify-content: $align;
+  justify-content: $alignY;
 }

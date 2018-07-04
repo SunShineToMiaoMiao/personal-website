@@ -11,7 +11,8 @@
 </script>
 
 <style lang="scss" scoped>
-.app-login{
-  margin-left: 1rem;
-}
+  .app-login {
+    display: inline-flex;
+    margin-left: 1rem;
+  }
 </style>

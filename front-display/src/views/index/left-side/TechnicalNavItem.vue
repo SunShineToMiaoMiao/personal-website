@@ -25,27 +25,31 @@
 </script>
 
 <style lang="scss" scoped>
-.technical-nav-item {
+  .technical-nav-item {
 
-      height: 34px;
-      display: flex;
-      align-items: center;
-      color: #757575;
-      text-decoration: none;
-      margin-bottom: 1px;
-      border-radius: 4px;
-      span:last-child{
-        font-size: 13px;
-        height: 22px;
-      }
-      &-icon {
-        img {
-          width: 16px;
-          height: 16px;
-        }
-        width: 35px;
-        text-align: center;
-        color: #999;
-      }
+    height: 34px;
+    display: flex;
+    align-items: center;
+    color: #757575;
+    text-decoration: none;
+    margin-bottom: 1px;
+    border-radius: 4px;
+    &:hover{
+      background-color: rgba(96, 137, 227, 0.1);
     }
+    span:last-child {
+      font-size: 13px;
+      height: 22px;
+      margin-left: 0.5rem;
+    }
+    &-icon {
+      img {
+        width: 16px;
+        height: 16px;
+      }
+      text-align: center;
+      color: #999;
+      margin-left: 0.5rem;
+    }
+  }
 </style>
