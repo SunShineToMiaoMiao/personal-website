@@ -37,9 +37,14 @@ module.exports = {
         'vue/no-parsing-error': [2, {"x-invalid-end-tag": false}],
         //启用console
         'no-console': 'off',
+        //函数名后的空格
+        'space-before-function-paren':["error", "never"],
         // 空格4个
         // 'indent': ['error', 4, {'SwitchCase': 1}],
         'indent': 'off',
+      "no-trailing-spaces": "error",
+        //开启分号
+        "semi": "error",
         "no-multiple-empty-lines": [1, {"max": 2}],//空行最多不能超过2行
         'vue/script-indent': [
             'error',

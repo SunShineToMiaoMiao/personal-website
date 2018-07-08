@@ -7,26 +7,41 @@
     <section class="app-section">
       <nav class="article-list-nav">
         <h5>热门</h5>
+        <filter-nav></filter-nav>
         <!-- 筛选条件 -->
-        <ul class="filter-list">
-          <router-link tag="li" to="/" class="filter-item">
-            <span class="title">阅读数</span>
-          </router-link>
-          <router-link tag="li" to="/" class="filter-item">
-            <span class="title">评论数</span>
-          </router-link>
-          <router-link tag="li" to="/" class="filter-item">
-            <span class="title">点赞数</span>
-          </router-link>
-          <router-link tag="li" to="/" class="filter-item">
-            <span class="title">发布时间</span>
-          </router-link>
-          <router-link tag="li" to="/" class="filter-item">
-            <span class="title">可下载</span>
-          </router-link>
-        </ul>
-        <!-- 小分辨率下的标签下拉框 -->
-        <div class="technical-tags"></div>
+        <!--<ul class="filter-list">-->
+          <!--<router-link tag="li" to="/" class="filter-item">-->
+            <!--<span class="title">阅读数</span>-->
+          <!--</router-link>-->
+          <!--<router-link tag="li" to="/" class="filter-item">-->
+            <!--<span class="title">评论数</span>-->
+          <!--</router-link>-->
+          <!--<router-link tag="li" to="/" class="filter-item">-->
+            <!--<span class="title">点赞数</span>-->
+          <!--</router-link>-->
+          <!--<router-link tag="li" to="/" class="filter-item">-->
+            <!--<span class="title">发布时间</span>-->
+          <!--</router-link>-->
+          <!--<router-link tag="li" to="/" class="filter-item">-->
+            <!--<span class="title">可下载</span>-->
+          <!--</router-link>-->
+        <!--</ul>-->
+        <!--&lt;!&ndash; 小分辨率下的标签下拉框 &ndash;&gt;-->
+        <!--<div class="technical-tags">-->
+          <!--<Dropdown trigger="click" on-click="onSelectedFilter">-->
+            <!--<a href="javascript:void(0)">-->
+              <!--筛选-->
+              <!--<Icon type="arrow-down-b"></Icon>-->
+            <!--</a>-->
+            <!--<DropdownMenu slot="list">-->
+              <!--<DropdownItem>阅读数</DropdownItem>-->
+              <!--<DropdownItem>评论数</DropdownItem>-->
+              <!--<DropdownItem>点赞数</DropdownItem>-->
+              <!--<DropdownItem>发布时间</DropdownItem>-->
+              <!--<DropdownItem>可下载</DropdownItem>-->
+            <!--</DropdownMenu>-->
+          <!--</Dropdown>-->
+        <!--</div>-->
       </nav>
       <transition name="fade" mode="out-in">
         <!--<router-view/>-->
@@ -40,11 +55,12 @@
 <script>
   import ArticleList from '../article-list/ArticleList'
   import TheLeftSide from './left-side/TechnicalNav'
+  import FilterNav from "./FilterNav";
 
   export default {
     name: 'TheIndex',
-    components: {TheLeftSide, ArticleList},
-    data () {
+    components: {FilterNav, TheLeftSide, ArticleList},
+    data() {
       return {
         msg: 'Welcome to Your Vue.js App'
       }
@@ -72,7 +88,7 @@
           font-size: 16px;
           font-weight: 500;
         }
-        .filter-list {
+        /*.filter-list {
           @include flex-row(baseline, baseline);
           text-align: right;
           margin-left: auto;
@@ -86,12 +102,8 @@
               color: #90979c;
             }
           }
-        }
+        }*/
       }
     }
   }
-
-  /*a {*/
-    /*color: #42b983;*/
-  /*}*/
 </style>

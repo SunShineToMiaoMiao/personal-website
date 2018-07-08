@@ -39,4 +39,18 @@
     }
   }
 
+  /* 技术标签 start */
+  @media screen and (min-width: 980px) {
+    .technical-nav {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    .technical-nav {
+        display: none;
+    }
+  }
+  /* 技术标签 end */
+
 </style>
