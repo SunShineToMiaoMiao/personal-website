@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import TheLayout from '@/views/layout/TheLayout' // 布局
 
 import TheIndex from '@/views/index/TheIndex' // 首页
-import Article from '@/views/article/Article' // 首页
+import Article from '@/views/article/TheArticle' // 首页
 
 Vue.use(Router)
 

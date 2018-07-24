@@ -23,8 +23,8 @@
       <div class="filter-drop-down">
         <Dropdown trigger="click" @on-click="onSelectedFilter">
           <a href="javascript:void(0)" class="filter-title">
-            {{filterTitle}}
-            <Icon type="arrow-down-b"></Icon>
+            <span><svg-icon icon-class="shaixuan"></svg-icon></span>
+            <span>{{filterTitle}}</span>
           </a>
           <DropdownMenu slot="list">
             <DropdownItem name="阅读数">阅读数</DropdownItem>
@@ -43,7 +43,6 @@
             <!---->
             <span><svg-icon icon-class="biaoqian"></svg-icon></span>
             <span>标签</span>
-            <Icon type="arrow-down-b"></Icon>
           </a>
           <DropdownMenu slot="list">
             <DropdownItem name="vue">
