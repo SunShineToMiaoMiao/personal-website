@@ -11,9 +11,12 @@ import 'iview/dist/styles/iview.css'
 import './my-theme/index.less'
 // SvgIcon
 import SvgIcon from '@/components/SvgIcon'
+// 引入highlight
+import Highlight from '@/directives/highlight'
 
 Vue.config.productionTip = false
 Vue.use(iView)
+Vue.use(Highlight)
 Vue.component('svg-icon', SvgIcon)
 
 /* eslint-disable no-new */
