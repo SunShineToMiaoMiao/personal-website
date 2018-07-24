@@ -34,3 +34,12 @@
   //align-content: $align;
   justify-content: $alignY;
 }
+
+/* flex纵向布局 */
+@mixin flex-column($alignY:flex-start,$alignX:center) {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: $alignX;
+  //align-content: $align;
+  justify-content: $alignY;
+}

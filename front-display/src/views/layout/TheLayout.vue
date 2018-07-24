@@ -28,57 +28,42 @@
       <aside></aside>
     </main>
 
-    &lt;!&ndash; 底部 &ndash;&gt;
-    <footer></footer>-->
-
     <!-- 布局 -->
-    <Layout>
-      <!-- 头部 -->
+    <!-- 头部 -->
+    <div class="header-wrapper">
       <header class="app-header">
-        <!-- logo -->
-        <the-logo/>
-        <nav>
-          <!-- 一级菜单 -->
-          <the-navbar/>
-          <div class="header-operation">
-            <!-- 搜索框 -->
-            <search-box/>
-            <!-- 登录按钮 -->
-            <login-or-register></login-or-register>
-          </div>
-        </nav>
-
-        <!--<Header class="app-header">-->
-        <!--<Row>-->
-        <!--<i-col :xs="8" :sm="6" :md="8" :lg="8">-->
-        <!--<the-logo/>-->
-        <!--</i-col>-->
-        <!--<i-col :xs="8" :sm="8" :md="6" :lg="6">-->
-        <!--<the-navbar/>-->
-        <!--</i-col>-->
-        <!--<i-col :xs="8" :sm="8" :md="10" :lg="10">-->
-        <!--<search-box/>-->
-        <!--</i-col>-->
-        <!--</Row>-->
-        <!--</Header>-->
+        <div class="header-container container">
+          <!-- logo -->
+          <the-logo/>
+          <nav>
+            <!-- 一级菜单 -->
+            <the-navbar/>
+            <div class="header-operation">
+              <!-- 搜索框 -->
+              <search-box/>
+              <!-- 登录按钮 -->
+              <login-or-register></login-or-register>
+            </div>
+          </nav>
+        </div>
       </header>
-
-      <!-- 主内容 -->
-      <main class="app-main">
-        <!--<Layout>-->
-          <transition name="fade" mode="out-in">
-            <router-view/>
-          </transition>
-        <!--</Layout>-->
-      </main>
-      <!-- 底部 -->
-      <footer class="app-footer">
-        <Footer>
-          Footer
-        </Footer>
-      </footer>
-    </Layout>
-
+    </div>
+    <!-- 主内容 -->
+    <main class="app-main">
+      <!--<Layout>-->
+      <transition name="fade" mode="out-in">
+        <div class="container">
+          <router-view/>
+        </div>
+      </transition>
+      <!--</Layout>-->
+    </main>
+    <!-- 底部 -->
+    <footer class="app-footer">
+      <Footer>
+        Footer
+      </Footer>
+    </footer>
   </div>
 </template>
 
@@ -98,7 +83,7 @@
       TheNavbar,
       TheLogo
     },
-    data () {
+    data() {
       return {
         msg: 'Welcome to Your Vue.js App'
       }

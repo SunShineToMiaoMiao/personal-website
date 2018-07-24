@@ -43,20 +43,20 @@
             <!---->
             <span><svg-icon icon-class="biaoqian"></svg-icon></span>
             <span>标签</span>
-            <Icon type="arrow-down-b"></Icon>
+            <!--<span><svg-icon icon-class="biaoqian"></svg-icon></span>-->
           </a>
           <DropdownMenu slot="list">
             <DropdownItem name="vue">
-              <span><svg-icon icon-class="vuejs"></svg-icon></span>
-              <span class="tech-tag-name">vue</span>
+              vue
+              <!--<span class="tech-tag-name">vue</span>-->
             </DropdownItem>
             <DropdownItem name="python">
-              <span><svg-icon icon-class="python1"></svg-icon></span>
-              <span class="tech-tag-name">python</span>
+              python
+              <!--<span class="tech-tag-name">python</span>-->
             </DropdownItem>
             <DropdownItem name="sass">
-              <span><svg-icon icon-class="Sass"></svg-icon></span>
-              <span class="tech-tag-name">sass</span>
+              sass
+              <!--<span class="tech-tag-name">sass</span>-->
             </DropdownItem>
             <!--<DropdownItem name="element">-->
             <!--</DropdownItem>-->
@@ -117,11 +117,12 @@
     .tag-drop-down {
       /*display: inline;*/
       .filter-title {
-        color: #333333;
+        color: #5C5C5C;
         /*line-height: 18px;*/
         height: 1.5em;
-        span:first-of-type {
-          vertical-align: sub;
+        span:last-of-type {
+          vertical-align: text-bottom;
+          font-size: 14px;
         }
       }
       .tech-tag-name {

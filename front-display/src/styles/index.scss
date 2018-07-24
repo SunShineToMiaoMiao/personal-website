@@ -1,7 +1,7 @@
 @import './variables.scss';
 @import './mixin.scss';
 @import './transition.scss';
-@import './iview';
+@import '../my-theme/iview';
 @import './sidebar.scss';
 @import './common.scss';
 @import './header.scss';
@@ -12,16 +12,24 @@
 //网站内容居中
 
 .app-container {
-
+  //@include flex-column($alignY:flex-start,$alignX:center);
+  position: relative;
+  background: $mainContainerBg;
 }
 
 .app-main {
   //@extend .padding;
   min-height: 100%;
-  margin-top: 6rem;
-  background: #fff;
+  //margin-top: 6rem;
+  //background: #fff;
   //minHeight: 500px;
-  padding: $mainPadding;
+  //padding: $mainPadding;
+  .main-container{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+  }
 }
 
 .app-card {

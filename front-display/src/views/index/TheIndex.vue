@@ -1,46 +1,43 @@
 <template>
   <div class="index-wrapper">
-    <aside>
-      <!-- 标签 -->
-      <the-left-side></the-left-side>
-    </aside>
+
     <section class="app-section">
       <nav class="article-list-nav">
         <h5>热门</h5>
         <filter-nav></filter-nav>
         <!-- 筛选条件 -->
         <!--<ul class="filter-list">-->
-          <!--<router-link tag="li" to="/" class="filter-item">-->
-            <!--<span class="title">阅读数</span>-->
-          <!--</router-link>-->
-          <!--<router-link tag="li" to="/" class="filter-item">-->
-            <!--<span class="title">评论数</span>-->
-          <!--</router-link>-->
-          <!--<router-link tag="li" to="/" class="filter-item">-->
-            <!--<span class="title">点赞数</span>-->
-          <!--</router-link>-->
-          <!--<router-link tag="li" to="/" class="filter-item">-->
-            <!--<span class="title">发布时间</span>-->
-          <!--</router-link>-->
-          <!--<router-link tag="li" to="/" class="filter-item">-->
-            <!--<span class="title">可下载</span>-->
-          <!--</router-link>-->
+        <!--<router-link tag="li" to="/" class="filter-item">-->
+        <!--<span class="title">阅读数</span>-->
+        <!--</router-link>-->
+        <!--<router-link tag="li" to="/" class="filter-item">-->
+        <!--<span class="title">评论数</span>-->
+        <!--</router-link>-->
+        <!--<router-link tag="li" to="/" class="filter-item">-->
+        <!--<span class="title">点赞数</span>-->
+        <!--</router-link>-->
+        <!--<router-link tag="li" to="/" class="filter-item">-->
+        <!--<span class="title">发布时间</span>-->
+        <!--</router-link>-->
+        <!--<router-link tag="li" to="/" class="filter-item">-->
+        <!--<span class="title">可下载</span>-->
+        <!--</router-link>-->
         <!--</ul>-->
         <!--&lt;!&ndash; 小分辨率下的标签下拉框 &ndash;&gt;-->
         <!--<div class="technical-tags">-->
-          <!--<Dropdown trigger="click" on-click="onSelectedFilter">-->
-            <!--<a href="javascript:void(0)">-->
-              <!--筛选-->
-              <!--<Icon type="arrow-down-b"></Icon>-->
-            <!--</a>-->
-            <!--<DropdownMenu slot="list">-->
-              <!--<DropdownItem>阅读数</DropdownItem>-->
-              <!--<DropdownItem>评论数</DropdownItem>-->
-              <!--<DropdownItem>点赞数</DropdownItem>-->
-              <!--<DropdownItem>发布时间</DropdownItem>-->
-              <!--<DropdownItem>可下载</DropdownItem>-->
-            <!--</DropdownMenu>-->
-          <!--</Dropdown>-->
+        <!--<Dropdown trigger="click" on-click="onSelectedFilter">-->
+        <!--<a href="javascript:void(0)">-->
+        <!--筛选-->
+        <!--<Icon type="arrow-down-b"></Icon>-->
+        <!--</a>-->
+        <!--<DropdownMenu slot="list">-->
+        <!--<DropdownItem>阅读数</DropdownItem>-->
+        <!--<DropdownItem>评论数</DropdownItem>-->
+        <!--<DropdownItem>点赞数</DropdownItem>-->
+        <!--<DropdownItem>发布时间</DropdownItem>-->
+        <!--<DropdownItem>可下载</DropdownItem>-->
+        <!--</DropdownMenu>-->
+        <!--</Dropdown>-->
         <!--</div>-->
       </nav>
       <transition name="fade" mode="out-in">
@@ -49,17 +46,25 @@
         <article-list></article-list>
       </transition>
     </section>
+
+    <aside class="app-right-aside">
+      <sidebar-box>
+        <!-- 标签 -->
+        <technical-nav></technical-nav>
+      </sidebar-box>
+    </aside>
   </div>
 </template>
 
 <script>
   import ArticleList from '../article-list/ArticleList'
-  import TheLeftSide from './left-side/TechnicalNav'
-  import FilterNav from "./FilterNav";
+  import FilterNav from './FilterNav'
+  import SidebarBox from '../../components/SidebarBox'
+  import TechnicalNav from './left-side/TechnicalNav'
 
   export default {
     name: 'TheIndex',
-    components: {FilterNav, TheLeftSide, ArticleList},
+    components: {TechnicalNav, SidebarBox, FilterNav, ArticleList},
     data() {
       return {
         msg: 'Welcome to Your Vue.js App'
@@ -75,9 +80,12 @@
 
   .index-wrapper {
     @include flex-row(flex-start, flex-start);
-    .app-section{
+    margin-top: 1.6rem;
+    border-radius: 2px;
+    .app-section {
       flex-grow: 1;
       text-align: left;
+      background-color: #FFFFFF;
       .article-list-nav {
         @include flex-row(space-between);
         background-color: #fff;
@@ -88,22 +96,26 @@
           font-size: 16px;
           font-weight: 500;
         }
-        /*.filter-list {
-          @include flex-row(baseline, baseline);
-          text-align: right;
-          margin-left: auto;
-
-          .filter-item {
-            margin: 0 10px;
-            cursor: pointer;
-            list-style: none;
-            span {
-              font-size: 14px;
-              color: #90979c;
-            }
-          }
-        }*/
       }
     }
+
+    .app-right-aside {
+      margin-left: 1.6rem;
+      /*background-color: #FFFFFF;*/
+    }
   }
+
+  /* 右边侧边栏 start */
+  @media screen and (min-width: 980px) {
+    .app-right-aside {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 979px) {
+    .app-right-aside {
+        display: none;
+    }
+  }
+  /* 右边侧边栏 end */
 </style>

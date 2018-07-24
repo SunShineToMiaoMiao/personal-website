@@ -16,14 +16,25 @@
     </div>
     <!-- 小分辨率下的下拉菜单 -->
     <div class="menu-drop-down">
-      <Menu mode="horizontal" active-name="1">
-        <Submenu name="1">
-          <template slot="title">
-            首页
-          </template>
-          <MenuItem name="3-4">常用</MenuItem>
-        </Submenu>
-      </Menu>
+      <!--<Menu mode="horizontal" active-name="1">-->
+        <!--<Submenu name="1">-->
+          <!--<template slot="title">-->
+            <!--首页-->
+          <!--</template>-->
+          <!--<MenuItem name="3-4">常用</MenuItem>-->
+        <!--</Submenu>-->
+      <!--</Menu>-->
+      <Dropdown trigger="click">
+          <a href="javascript:void(0)" class="menu-title">
+            <span>首页</span>
+            <Icon type="ios-arrow-down"></Icon>
+          </a>
+          <DropdownMenu slot="list">
+            <DropdownItem name="vue">
+              常用
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
     </div>
   </div>
 </template>
@@ -62,6 +73,9 @@
     .menu-drop-down{
       /*<!--font-size: $firstLevel !important;-->*/
       margin-left: 1rem;
+      .menu-title{
+        color: $appColor;
+      }
     }
 /*
     div:last-child {

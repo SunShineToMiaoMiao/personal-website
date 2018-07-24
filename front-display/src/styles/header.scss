@@ -1,46 +1,44 @@
 @import './variables.scss';
 @import './mixin.scss';
 @import './transition.scss';
-@import './iview';
+@import '../my-theme/iview';
 @import './common.scss';
 
 /**
  header
  */
-.app-header {
-  //@extend .flex-row-center;
-  //  @extend .padding;
-  @include flex-row(flex-start);
-  position: fixed;
-  height: 58px;
-  width: 100%;
-  z-index: $fixedZindex;
-  padding: $mainPadding;
-  //border-bottom: 1px solid #D4D4D4;
-  //box-shadow: ;
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
-  nav {
-    @include flex-row(space-between);
-    .header-operation {
+.header-wrapper {
+  position: relative;
+  height: 3.9rem;
+  .app-header {
+    position: fixed;
+    height: 3.9rem;
+    width: 100%;
+    z-index: $fixedZindex;
+    //padding: $mainPadding;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.1);
+    //header内容
+    .header-container {
       @include flex-row(flex-start);
+      height: 100%;
+      nav {
+        @include flex-row(space-between);
+        .header-operation {
+          @include flex-row(flex-start);
+        }
+        flex-grow: 1;
+      }
+      .app-logo {
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
     }
-    flex-grow: 1;
-  }
-  .app-logo {
-    flex-shrink: 0;
-    flex-grow:0;
   }
 }
-//@media screen and (min-width: 980px) {
-//  .app-header {
-//    padding: 0 5%;
+
+//@media screen and (max-width: 980px) {
+//  .app-header .header-container {
+//    width: 96%;
 //  }
 //}
-//
-//@media screen and (max-width: 9px) {
-//  .app-header {
-//    padding: 0 2%;
-//  }
-//}
-
-

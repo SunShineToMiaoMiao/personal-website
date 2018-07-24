@@ -27,6 +27,7 @@
     margin-right: 2rem;
     &-title {
       margin-bottom: 0.5rem;
+      font-size: 14px;
       /*margin-top: 1rem;*/
     }
     &-title::after {
