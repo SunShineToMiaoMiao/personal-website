@@ -1,11 +1,12 @@
 <template>
-  <div class="article-wrapper">
+  <div class="main-container">
 
     <!-- 左边侧边栏 -->
     <operation-panel></operation-panel>
 
-    <!-- 文章内容 -->
-    <div class="article">
+    <div class="container article-wrapper">
+      <!-- 文章内容 -->
+    <section class="app-section article">
       <h1>基于vue+element实现的修改密码的单文件组件：changePassword.vue</h1>
       <div class="type-tag-time flex-row-center">
         <label>原创</label>
@@ -14,10 +15,10 @@
         <time>2018-03-22</time>
       </div>
       <article class="article-content">
-        <h2>1. 应用场景</h2>
-        <h3>1.1 web端管理系统</h3>
+        <h2 id="heading_1" data-id="heading_1">1. 应用场景</h2>
+        <h3 id="heading_1_0" data-id="heading_1_0">1.1 web端管理系统</h3>
         <p>最近在做基于vue+element的web端后台管理项目，遇到登录用户可以修改密码的需求，于是整理出一个修改密码的单文件组件：changePassword.vue</p>
-        <h2>2. 代码</h2>
+        <h2 id="heading_2" data-id="heading_2">2. 代码</h2>
         <pre v-highlightA>
           <!-- 需要用v-text指令，否则会编译里面的代码 -->
           <code v-text="html">
@@ -28,19 +29,34 @@
           </code>
         </pre>
       </article>
-    </div>
+    </section>
 
     <!-- 右边侧边栏 -->
-    <aside></aside>
+    <aside class="app-right-aside">
+      <sidebar-box title="目录">
+          <ul>
+            <li><a href="#heading_1">1. 应用场景</a></li>
+            <li>
+              <ul><li><a href="#heading_1_0">1.1 web端管理系统</a></li></ul>
+            </li>
+            <li><a href="#heading_2">2. 代码</a></li>
+          </ul>
+      </sidebar-box>
+    </aside>
+
+    </div>
+
+
   </div>
 </template>
 
 <script>
   import OperationPanel from './left-side/OperationPanel'
+  import SidebarBox from '../../components/SidebarBox';
 
   export default {
     name: 'TheArticle',
-    components: {OperationPanel},
+    components: {SidebarBox, OperationPanel},
     data() {
       return {
         html: '<div class="el-form-item el-form-item--feedback">\n' +
@@ -88,9 +104,22 @@
 
 <style lang="scss" scoped>
   @import "../../styles/variables";
+  @import "../../styles/mixin";
+
+  .article-wrapper{
+    /*@include flex-row(flex-start, flex-start);*/
+    display: -webkit-box;
+    /*<!--@include flex-row(flex-start, flex-start);-->*/
+    /*<!--border-radius: 2px;-->*/
+    /*<!--margin-top: 1.6rem;-->*/
+    /*background-color: #FFFFFF;*/
+  }
 
   .article {
     text-align: left;
+    padding: 1.6rem;
+    background-color: #FFFFFF;
+
     h1 {
       font-size: 32px;
       font-weight: 500;

@@ -1,5 +1,5 @@
 <template>
-  <div class="index-wrapper">
+  <div class="container main-container">
 
     <section class="app-section">
       <nav class="article-list-nav">
@@ -78,44 +78,15 @@
   @import "../../styles/variables";
   @import "../../styles/mixin";
 
-  .index-wrapper {
-    @include flex-row(flex-start, flex-start);
-    margin-top: 1.6rem;
-    border-radius: 2px;
-    .app-section {
-      flex-grow: 1;
-      text-align: left;
-      background-color: #FFFFFF;
-      .article-list-nav {
-        @include flex-row(space-between);
-        background-color: #fff;
-        padding: 0.5rem 1rem;
-        border-bottom: 1px solid #f6f6f6;
-        h5 {
-          margin: 0;
-          font-size: 16px;
-          font-weight: 500;
-        }
-      }
-    }
-
-    .app-right-aside {
-      margin-left: 1.6rem;
-      /*background-color: #FFFFFF;*/
+  .article-list-nav {
+    @include flex-row(space-between);
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #f6f6f6;
+    h5 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
-
-  /* 右边侧边栏 start */
-  @media screen and (min-width: 980px) {
-    .app-right-aside {
-      display: block;
-    }
-  }
-
-  @media screen and (max-width: 979px) {
-    .app-right-aside {
-        display: none;
-    }
-  }
-  /* 右边侧边栏 end */
 </style>

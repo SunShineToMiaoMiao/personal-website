@@ -1,33 +1,5 @@
 <template>
   <div class="app-container">
-
-    <!--<header class="app-header">
-      <Row>
-        <i-col :xs="4" :sm="4" :md="6" :lg="8">
-          <the-logo/>
-        </i-col>
-        <i-col :xs="20" :sm="16" :md="12" :lg="8">
-          <the-navbar/>
-        </i-col>
-        <i-col :xs="24" :sm="4" :md="6" :lg="8">
-          <search-box/>
-        </i-col>
-      </Row>
-    </header>
-
-    &lt;!&ndash; 主内容 &ndash;&gt;
-    <main class="app-main">
-      <section class="app-section warp-pagination">
-        <transition name="fade" mode="out-in">
-          &lt;!&ndash;文章列表&ndash;&gt;
-          &lt;!&ndash;<article></article>&ndash;&gt;
-          <router-view/>
-        </transition>
-      </section>
-      &lt;!&ndash; 右边目录区 &ndash;&gt;
-      <aside></aside>
-    </main>
-
     <!-- 布局 -->
     <!-- 头部 -->
     <div class="header-wrapper">
@@ -52,9 +24,9 @@
     <main class="app-main">
       <!--<Layout>-->
       <transition name="fade" mode="out-in">
-        <div class="container">
+        <!--<div class="container">-->
           <router-view/>
-        </div>
+        <!--</div>-->
       </transition>
       <!--</Layout>-->
     </main>
