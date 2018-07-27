@@ -1,13 +1,8 @@
 <template>
-  <!--<div>-->
-
-  <!--</div>-->
-  <!--<sidebar-box title='目录'>-->
-          <!---->
-      <!--</sidebar-box>-->
-  <sidebar-box title="目录">
-    <ul class="catalog">
-      <li><a href="#heading_1">1. 应用场景</a></li>
+  <sidebar-box class="catalog">
+    <p class="catalog-title">目录</p>
+    <ul class="catalog-first-level">
+      <li><a href="#heading_1">1. 应用场景啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦</a></li>
       <li>
         <a href="#heading_1_0">2. 思路</a>
         <ul class="catalog-second-level">
@@ -28,6 +23,7 @@
 
 <script>
   import SidebarBox from '../../../components/SidebarBox'
+
   export default {
     name: 'catalog',
     components: {SidebarBox}
@@ -35,38 +31,100 @@
 </script>
 
 <style lang="scss" scoped>
-.catalog{
-  position: relative;
-  a{
-    display: block;
+  @import "../../../styles/variables";
+
+  .catalog {
     position: relative;
-    padding: 4px 0 4px 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    &:before{
-      left: 5px;
-    margin-top: -3px;
-    width: 6px;
-    height: 6px;
-        content: "";
-    position: absolute;
-    top: 50%;
-    /*<!--left: 0;-->*/
-    /*<!--margin-top: -2px;-->*/
-    /*<!--width: 4px;-->*/
-    /*<!--height: 4px;-->*/
-    background-color: lightseagreen;
-    border-radius: 50%;
+    &-title {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.8;
     }
-  }
-  &-second-level{
-    padding: 2px 10px;
-    position: relative;
-    &-three-level{
-      padding: 2px 10px;
+    a {
+      display: block;
+      position: relative;
+      padding: 4px 0 4px 21px;
+      white-space: nowrap;
+      overflow: hidden;
+      /*&:before {
+        left: 5px;
+        margin-top: -3px;
+        width: 6px;
+        height: 6px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: $linkColor;
+        border-radius: 50%;
+      }*/
+    }
+    &-first-level a {
+      /*display: block;*/
+      /*position: relative;*/
+      /*!*padding: 4px 0 4px 12px;*!*/
+      /*padding: 4px 0 4px 21px;*/
+      /*white-space: nowrap;*/
+      /*overflow: hidden;*/
+      /*text-overflow: ellipsis;*/
+      &:before {
+        left: 5px;
+        margin-top: -3px;
+        width: 6px;
+        height: 6px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: $linkColor;
+        border-radius: 50%;
+      }
+    }
+    &-second-level a {
+      display: block;
+      position: relative;
+      /*padding: 4px 0 4px 12px;*/
+      padding: 4px 0 4px 21px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:before {
+        left: 5px;
+        margin-top: -3px;
+        width: 5px;
+        height: 5px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: $linkColor;
+        border-radius: 50%;
+      }
+    }
+    &-three-level a {
+      display: block;
+      position: relative;
+      /*padding: 4px 0 4px 12px;*/
+      padding: 4px 0 4px 21px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:before {
+        left: 5px;
+        margin-top: -3px;
+        width: 4px;
+        height: 4px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        background-color: $linkColor;
+        border-radius: 50%;
+      }
+    }
+    &-second-level, &-three-level {
+      padding: 0 10px;
       position: relative;
     }
+    /*&-three-level{*/
+    /*padding: 0 10px;*/
+    /*position: relative;*/
+    /*}*/
   }
-}
 </style>

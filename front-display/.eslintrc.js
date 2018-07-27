@@ -54,6 +54,6 @@ module.exports = {
       }
     ],
     // 禁止覆盖保留字
-    'vue/no-reservered-keys': 'off',
+    'vue/no-reserved-keys': 'off',
   }
 }
