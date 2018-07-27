@@ -33,15 +33,7 @@
 
     <!-- 右边侧边栏 -->
     <aside class="app-right-aside">
-      <sidebar-box title="目录">
-          <ul class="catalog">
-            <li><a href="#heading_1">1. 应用场景</a></li>
-            <li>
-              <ul><li><a href="#heading_1_0">1.1 web端管理系统</a></li></ul>
-            </li>
-            <li><a href="#heading_2">2. 代码</a></li>
-          </ul>
-      </sidebar-box>
+      <catalog></catalog>
     </aside>
     <!--</div>-->
   </div>
@@ -50,10 +42,11 @@
 <script>
   import OperationPanel from './left-side/OperationPanel'
   import SidebarBox from '../../components/SidebarBox'
+  import Catalog from './right-side/Catalog'
 
   export default {
     name: 'TheArticle',
-    components: {SidebarBox, OperationPanel},
+    components: {Catalog, SidebarBox, OperationPanel},
     data() {
       return {
         html: '<div class="el-form-item el-form-item--feedback">\n' +
@@ -132,9 +125,6 @@
         border-radius: 5px;
         margin-right: 5px;
       }
-    }
-    hr {
-      margin: 20px 0;
     }
     /* 文章内容 */
     &-content {

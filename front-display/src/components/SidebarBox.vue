@@ -33,14 +33,16 @@
 .sidebar-box{
   border-radius: 2px;
   background-color: #FFFFFF;
+  min-width: 242px;
+  width: 242px;
+  font-size: 14px;
+  text-align: left;
   &-title{
-    font-size: 14px;
     border-bottom: 1px solid #ececec;
     padding: 14px 16px;
     line-height: 1;
   }
   &-container{
-    text-align: left;
     padding: 1.2rem;
   }
 }
