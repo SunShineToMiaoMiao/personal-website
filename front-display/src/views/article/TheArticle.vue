@@ -1,10 +1,10 @@
 <template>
-  <div class="main-container">
+  <div class="main-container container article-wrapper">
 
     <!-- 左边侧边栏 -->
     <operation-panel></operation-panel>
 
-    <div class="container article-wrapper">
+    <!--<div class="container article-wrapper">-->
       <!-- 文章内容 -->
     <section class="app-section article">
       <h1>基于vue+element实现的修改密码的单文件组件：changePassword.vue</h1>
@@ -34,7 +34,7 @@
     <!-- 右边侧边栏 -->
     <aside class="app-right-aside">
       <sidebar-box title="目录">
-          <ul>
+          <ul class="catalog">
             <li><a href="#heading_1">1. 应用场景</a></li>
             <li>
               <ul><li><a href="#heading_1_0">1.1 web端管理系统</a></li></ul>
@@ -43,16 +43,13 @@
           </ul>
       </sidebar-box>
     </aside>
-
-    </div>
-
-
+    <!--</div>-->
   </div>
 </template>
 
 <script>
   import OperationPanel from './left-side/OperationPanel'
-  import SidebarBox from '../../components/SidebarBox';
+  import SidebarBox from '../../components/SidebarBox'
 
   export default {
     name: 'TheArticle',

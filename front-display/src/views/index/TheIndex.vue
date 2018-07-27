@@ -4,41 +4,8 @@
     <section class="app-section">
       <nav class="article-list-nav">
         <h5>热门</h5>
-        <filter-nav></filter-nav>
         <!-- 筛选条件 -->
-        <!--<ul class="filter-list">-->
-        <!--<router-link tag="li" to="/" class="filter-item">-->
-        <!--<span class="title">阅读数</span>-->
-        <!--</router-link>-->
-        <!--<router-link tag="li" to="/" class="filter-item">-->
-        <!--<span class="title">评论数</span>-->
-        <!--</router-link>-->
-        <!--<router-link tag="li" to="/" class="filter-item">-->
-        <!--<span class="title">点赞数</span>-->
-        <!--</router-link>-->
-        <!--<router-link tag="li" to="/" class="filter-item">-->
-        <!--<span class="title">发布时间</span>-->
-        <!--</router-link>-->
-        <!--<router-link tag="li" to="/" class="filter-item">-->
-        <!--<span class="title">可下载</span>-->
-        <!--</router-link>-->
-        <!--</ul>-->
-        <!--&lt;!&ndash; 小分辨率下的标签下拉框 &ndash;&gt;-->
-        <!--<div class="technical-tags">-->
-        <!--<Dropdown trigger="click" on-click="onSelectedFilter">-->
-        <!--<a href="javascript:void(0)">-->
-        <!--筛选-->
-        <!--<Icon type="arrow-down-b"></Icon>-->
-        <!--</a>-->
-        <!--<DropdownMenu slot="list">-->
-        <!--<DropdownItem>阅读数</DropdownItem>-->
-        <!--<DropdownItem>评论数</DropdownItem>-->
-        <!--<DropdownItem>点赞数</DropdownItem>-->
-        <!--<DropdownItem>发布时间</DropdownItem>-->
-        <!--<DropdownItem>可下载</DropdownItem>-->
-        <!--</DropdownMenu>-->
-        <!--</Dropdown>-->
-        <!--</div>-->
+        <filter-nav></filter-nav>
       </nav>
       <transition name="fade" mode="out-in">
         <!--<router-view/>-->

@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-box">
     <div v-if="_title" class="sidebar-box-title">
-      <p>技术标签</p>
+      <p>{{ _title }}</p>
     </div>
     <div class="sidebar-box-container">
       <slot></slot>
@@ -33,9 +33,11 @@
 .sidebar-box{
   border-radius: 2px;
   background-color: #FFFFFF;
-  &-tilte{
-    /*width: ;*/
-    border-bottom: #dddddd;
+  &-title{
+    font-size: 14px;
+    border-bottom: 1px solid #ececec;
+    padding: 14px 16px;
+    line-height: 1;
   }
   &-container{
     text-align: left;
