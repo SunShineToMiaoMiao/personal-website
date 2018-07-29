@@ -40,5 +40,6 @@ const routes = [
 // new Router({})
 
 export default new Router({
+  mode: 'history', // 去掉路由中的#
   routes
 })

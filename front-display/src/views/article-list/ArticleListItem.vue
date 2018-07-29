@@ -16,8 +16,9 @@
       <ul>
         <li>127 次阅读</li>
         <li>12 评论</li>
-        <li>2 已应用</li>
-        <li>2018-04-13 12:03:03</li>
+        <li>2 已应用
+
+        <li>2018-04-13 12:03</li>
       </ul>
     </div>
     <!--<span>127 次阅读 | 12 评论 | 2 已应用 | 2018-04-13 12:03:03 </span>-->
@@ -33,7 +34,6 @@
 
 <style lang="scss" scoped>
   @import "../../styles/variables";
-
   .article-list-item {
     padding: 16px;
     div:first-child {

@@ -4,15 +4,23 @@
     <!-- 左边侧边栏 -->
     <operation-panel></operation-panel>
 
-    <!--<div class="container article-wrapper">-->
       <!-- 文章内容 -->
     <section class="app-section article">
       <h1>基于vue+element实现的修改密码的单文件组件：changePassword.vue</h1>
-      <div class="type-tag-time flex-row-center">
-        <label>原创</label>
-        <Tag checkable color="#41B883">vue</Tag>
-        <Tag checkable color="#409EFF">element</Tag>
-        <time>2018-03-22</time>
+      <ul class="article-info">
+        <li>127 次阅读</li>
+        <li>12 评论</li>
+        <li>2 已应用
+
+        <li>2018-04-13 12:03</li>
+      </ul>
+      <div class="article-tag">
+        <label class="technical-tag">原创</label>
+        <label class="technical-tag">vue</label>
+        <label class="technical-tag">element</label>
+        <!--<Tag checkable color="#41B883">vue</Tag>-->
+        <!--<Tag checkable color="#409EFF">element</Tag>-->
+        <!--<time>2018-03-22</time>-->
       </div>
       <article class="article-content">
         <h2 id="heading_1" data-id="heading_1">1. 应用场景</h2>
@@ -76,14 +84,6 @@
         'is32Bit("a") // false'
       }
     },
-    // directives: {
-    //   'v-highlight': (el) => {
-    //     let blocks = el.querySelectorAll('pre code')
-    //     blocks.forEach((block) => {
-    //       hljs.highlightBlock(block)
-    //     })
-    //   }
-    // },
     beforeRouteUpdate(to, from, next) {
       // react to route changes...
       // don't forget to call next()
@@ -97,12 +97,7 @@
   @import "../../styles/mixin";
 
   .article-wrapper{
-    /*@include flex-row(flex-start, flex-start);*/
     display: -webkit-box;
-    /*<!--@include flex-row(flex-start, flex-start);-->*/
-    /*<!--border-radius: 2px;-->*/
-    /*<!--margin-top: 1.6rem;-->*/
-    /*background-color: #FFFFFF;*/
   }
 
   .article {
@@ -113,11 +108,24 @@
     h1 {
       font-size: 32px;
       font-weight: 500;
-      /*height: 42px;*/
       line-height: 42px;
     }
-    .type-tag-time {
-      margin: 0.5rem 0;
+    &-info {
+      list-style: none;
+      @include flex-row($alignY:flex-start,$alignX:baseline);
+        white-space: nowrap;
+      margin: 1rem 0;
+      li:not(:last-child):after {
+        content: "\B7";
+        margin: 0 .4em;
+        color: #8f969c;
+      }
+    }
+    &-tag {
+      @include flex-row(flex-start,flex-start);
+      /*margin: 0.5rem 0;*/
+      margin-bottom: 2rem;
+
       label {
         color: $appColor;
         border: solid 1px;
@@ -133,6 +141,7 @@
       font-weight: 400;
       font-size: 15px;
       color: #333333;
+
       h2, h3 {
         line-height: 1.5;
         font-weight: 500;

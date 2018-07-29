@@ -35,6 +35,14 @@
 
   .catalog {
     position: relative;
+
+    &-first-level, &-second-level, &-three-level {
+      position: relative;
+      list-style: none;
+    }
+    &-second-level, &-three-level {
+      padding: 0 10px;
+    }
     &-title {
       font-size: 16px;
       font-weight: bold;
@@ -46,6 +54,7 @@
       padding: 4px 0 4px 21px;
       white-space: nowrap;
       overflow: hidden;
+      text-overflow: ellipsis;
       /*&:before {
         left: 5px;
         margin-top: -3px;
@@ -59,13 +68,6 @@
       }*/
     }
     &-first-level a {
-      /*display: block;*/
-      /*position: relative;*/
-      /*!*padding: 4px 0 4px 12px;*!*/
-      /*padding: 4px 0 4px 21px;*/
-      /*white-space: nowrap;*/
-      /*overflow: hidden;*/
-      /*text-overflow: ellipsis;*/
       &:before {
         left: 5px;
         margin-top: -3px;
@@ -75,17 +77,10 @@
         position: absolute;
         top: 50%;
         background-color: $linkColor;
-        border-radius: 50%;
+        border-radius: 10%;
       }
     }
     &-second-level a {
-      display: block;
-      position: relative;
-      /*padding: 4px 0 4px 12px;*/
-      padding: 4px 0 4px 21px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       &:before {
         left: 5px;
         margin-top: -3px;
@@ -99,13 +94,6 @@
       }
     }
     &-three-level a {
-      display: block;
-      position: relative;
-      /*padding: 4px 0 4px 12px;*/
-      padding: 4px 0 4px 21px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       &:before {
         left: 5px;
         margin-top: -3px;
@@ -118,13 +106,6 @@
         border-radius: 50%;
       }
     }
-    &-second-level, &-three-level {
-      padding: 0 10px;
-      position: relative;
-    }
-    /*&-three-level{*/
-    /*padding: 0 10px;*/
-    /*position: relative;*/
-    /*}*/
+
   }
 </style>
