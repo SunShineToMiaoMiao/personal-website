@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+# 自定义app
+CUSTOMIZED_APPS = [
+    'learn_django'
+]
+INSTALLED_APPS += CUSTOMIZED_APPS
+
 # django 中间件
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -107,7 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 # LANGUAGE_CODE = 'zh-cn'
 # 时区
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
