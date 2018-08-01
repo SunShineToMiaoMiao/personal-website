@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} - 学习啦</title>
+</head>
+<body>
+
+
+<div class="main">
+    {% block content %}
+    <a href="/add3/4/5/">计算 4+5</a>
+    <a href="{% url 'add2' 45400 522 %}">计算 45400+522</a>
+    <a href="/demoOne">显示demoOne</a>
+
+    <hr>
+    <strong>{{ name }}</strong>
+
+    <hr>
+    <h3>技术标签</h3>
+    <ul>
+        {% for i in tagList %}
+
+        <li>{{ i }}
+            {% if not forloop.first %}***{% endif %}
+            {% if not forloop.last %}----------{% endif %}
+
+            {% if 'java' in List %}
+            java在名单中
+            {% endif %}
+        </li>
+
+        {% endfor %}
+    </ul>
+
+    <hr>
+    <i>{{ pigObj.name }}</i>
+    <i>{{ pigObj.desc }}</i>
+
+    <hr>
+    <!-- 获取当前用户 -->
+    {{ request.user }}<br>
+    <!-- 获取网址 -->
+    {{ request.path }}<br>
+    <!-- 获取当前用户 -->
+    {{ request.GET.urlencode }}<br>
+
+
+    {% endblock %}
+</div>
+
+<style type="text/css">
+
+.main{
+    background-color:#f5f5f5;
+    border:1px solid #cccc;
+    width:500px;
+    height:500px;
+    padding:20px;
+}
+a{
+    display:block;
+}
+
+
+
+</style>
+</body>
+
+</html>

@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from learn_django import views as learn_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', learn_views.index, name='home'),
+    # path('add/', learn_views.add_technical_tag, name='add'),
+    path('add2/<str:tagName>/<str:bgColor>/', learn_views.add_technical_tag_2, name='add2'),
+    path('add3/<int:a>/<int:b>/', learn_views.add2, name='add3'),
+    path('add4/<int:a>/<int:b>/', learn_views.add3, name='add4'),
+    path('demoOne/',learn_views.display_one, name='demoOne'),
 ]

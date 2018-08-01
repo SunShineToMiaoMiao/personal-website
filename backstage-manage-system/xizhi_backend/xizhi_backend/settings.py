@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+# 使用pymysql连接mysql
+import pymysql
+pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # 项目的根目录
@@ -79,11 +82,17 @@ WSGI_APPLICATION = 'xizhi_backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+# 配置数据库MariaDB
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'xi_zhi',  # 数据库名字
+        'HOST': '',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'root123456'
+
     }
 }
 
