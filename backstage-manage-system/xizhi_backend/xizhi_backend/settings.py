@@ -44,7 +44,10 @@ INSTALLED_APPS = [
 ]
 # 自定义app
 CUSTOMIZED_APPS = [
-    'learn_django'
+    'learn_django',
+    # 'technical_tag',
+    'blog',
+    'xizhi_backend'
 ]
 INSTALLED_APPS += CUSTOMIZED_APPS
 
@@ -119,8 +122,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 # 语言
-LANGUAGE_CODE = 'en-us'
-# LANGUAGE_CODE = 'zh-cn'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 # 时区
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Shanghai'

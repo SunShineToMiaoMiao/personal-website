@@ -1,0 +1,1 @@
+from .technical_tag import *
