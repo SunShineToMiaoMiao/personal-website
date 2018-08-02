@@ -8,6 +8,11 @@
 # /test/e2e/reports/
 # selenium-debug.log
 
+# 数据库迁移数据
+xizhi_backend/migrations
+technical_tag/migrations
+blog/migrations
+
 # Editor directories and files
 .idea
 __pycache__
