@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from learn_django import views as learn_views
+# import views.article as article
+from .views import *
+# from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +28,5 @@ urlpatterns = [
     path('add3/<int:a>/<int:b>/', learn_views.add2, name='add3'),
     path('add4/<int:a>/<int:b>/', learn_views.add3, name='add4'),
     path('demoOne/',learn_views.display_one, name='demoOne'),
+    path('article/list', article.get_list, name='article_list')
 ]

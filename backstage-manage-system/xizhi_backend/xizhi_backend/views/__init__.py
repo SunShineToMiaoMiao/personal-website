@@ -1,0 +1,1 @@
+from .article import get_list
