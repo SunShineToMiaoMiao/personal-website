@@ -28,5 +28,7 @@ urlpatterns = [
     path('add3/<int:a>/<int:b>/', learn_views.add2, name='add3'),
     path('add4/<int:a>/<int:b>/', learn_views.add3, name='add4'),
     path('demoOne/',learn_views.display_one, name='demoOne'),
-    path('article/list', article.get_list, name='article_list')
+    path('article/list', article.get_list, name='article_list'),
+    path('article/count', article.get_count, name='article_count'),
+    path('technicalTag/list', technical_tag.get_list, name='tag_list')
 ]

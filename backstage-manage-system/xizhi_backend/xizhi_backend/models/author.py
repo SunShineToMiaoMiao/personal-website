@@ -1,7 +1,9 @@
 from django.db import models
+import uuid
 
 
 class Author(models.Model):
+    id = models.UUIDField(primary_key=True, auto_created=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)
     qq = models.CharField(max_length=50)
     addr = models.TextField()
