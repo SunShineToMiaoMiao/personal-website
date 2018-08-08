@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from django.contrib.auth.models import User
 
 
 class Article(models.Model):
@@ -7,7 +8,7 @@ class Article(models.Model):
     title = models.CharField(max_length=50, help_text=u'文章标题')
     # 定义外键和一对一关系的时候需要加on_delete选项，此参数为了避免两个表里的数据不一致问题
     # CASCADE：级联删除; PROTECT：此值设置，是会报完整性错误。
-    author = models.ForeignKey('Author', on_delete=models.CASCADE, help_text=u'作者')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, help_text=u'作者')
     excerpt = models.TextField(default=u'摘要', help_text=u'文章摘要')
     content = models.TextField(help_text=u'文章内容')
     is_delete = models.BooleanField(default=False, help_text=u'是否删除')
